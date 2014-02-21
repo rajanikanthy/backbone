@@ -44,6 +44,7 @@ App.Views.Directory = Backbone.View.extend({
 			email : $('input.email', $form).val()
 		});
 		if ( newContact.isValid()) {
+			App.Contacts.add(newContact);
 			newContact.save();
 			$('input[type=text]', $form).val('');
 			this.addFormHide();

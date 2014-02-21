@@ -3,7 +3,8 @@ App.Model.Contact = Backbone.Model.extend({
 		firstName : '',
 		lastName : '',
 		phoneNumber : '<UNLISTED>',
-		email : '<UNLISTED>'
+		email : '<UNLISTED>',
+		idAttribute : 'id'
 	},
 	
 	validate : function(attrs,options) {
