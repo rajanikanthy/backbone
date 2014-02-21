@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Backbone Application Development Starter</title>
+		<script src="scripts/underscore-min.js"></script>
+		<script src="scripts/jquery-1.11.0.min.js"></script>
+		<script src="scripts/backbone-min.js"></script>
+	</head>
+	<body>
+		<div id="display">
+			<div class='controls'>
+				<button class='add'>Add New Contact</button>
+				<form method='' action='' style='display:none'>
+					<input type='text' placeholder="First Name" class='firstName' /><br/>
+					<input type='text' placeholder="Last Name" class='lastName' /><br/>
+					<input type='text' placeholder="Email" class='email' /><br/>
+					<input type='text' placeholder="Phone Number" class='phoneNumber' /><br/>
+					<button class='save'>Save Contact</button>
+				</form>
+			</div>
+			<div class="listing">Houston we have a problem.</div>
+		</div>
+		<script id="template-contact" type="template">
+			<div class="contact">
+				<h2><%-firstName%><% if (lastName) { %> <%-lastName%><% } %></h2>
+				<a href="mailto:<%-email%>"><%-email%></a><br />
+				<a href="tel:<%-phoneNumber%>"><%-phoneNumber%></a><br />
+				<button class="delete">Delete</button>
+				<button class='edit'>Edit</button>
+			</div>
+		</script>
+	</body>
+	<script src="scripts/main.js"></script>
+	<script src="scripts/models/contact.js"></script>
+	<script src="scripts/collections/contact.js"></script>
+	<script src="scripts/views/contact.js"></script>
+	<script src="scripts/views/directory.js"></script>
+	<script src="scripts/router.js"></script>
+</html>
